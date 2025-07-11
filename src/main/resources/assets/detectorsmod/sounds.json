@@ -1,0 +1,27 @@
+{
+  "detector_success": {
+    "subtitle": "detectorsmod:detector_success",
+    "sounds": [
+      {
+        "name": "detectorsmod:detector_success"
+      }
+    ]
+  },
+  "detector_fail": {
+      "subtitle": "detectorsmod:detector_failure",
+      "sounds": [
+        {
+            "name": "detectorsmod:detector_failure"
+        }
+      ]
+  },
+
+  "jukebox_song.music_detectorists": {
+    "subtitle": "item.detectorsmod.detectorists_music_disc.desc",
+    "sounds": [
+      {
+        "name": "detectorsmod:jukebox_song/music_detectorists"
+      }
+    ]
+  }
+}

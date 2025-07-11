@@ -1,6 +1,17 @@
 {
-  "item.detectorsmod.copper_coil": "Copper Coil",
-  "item.detectorsmod.handheld_detector": "Handheld Detector",
   "creativetab.detectors.detectors_tools": "Detectors Tools",
-  "creativetab.detectors.detectors_items": "Detectors Items"
+  "creativetab.detectors.detectors_items": "Detectors Items",
+
+  "item.detectorsmod.copper_coil": "Copper Coil",
+
+  "item.detectorsmod.handheld_detector": "Handheld Detector",
+  "item.detectorsmod.gold_detector": "Gold Detector",
+  "item.detectorsmod.diamond_detector": "Diamond Detector",
+  "item.detectorsmod.netherite_detector": "Netherite Detector",
+
+  "detectorsmod:detector_failure": "Detector Failure",
+  "detectorsmod:detector_success": "Detector Success!",
+
+  "item.detectorsmod.detectorists_music_disc": "Detectorists Music Disc",
+  "item.detectorsmod.detectorists_music_disc.desc": "Johnny Flynn - Detectorists"
 }

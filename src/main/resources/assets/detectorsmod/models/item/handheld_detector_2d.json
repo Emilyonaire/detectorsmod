@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "detectorsmod:item/handheld_detector"
+  }
+}

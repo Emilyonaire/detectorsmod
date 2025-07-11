@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "detectorsmod:item/handheld_detector"
+    "layer0": "detectorsmod:item/detectorists_music_disc"
   }
 }

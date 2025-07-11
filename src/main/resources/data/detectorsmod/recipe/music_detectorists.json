@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CDC",
+    " C "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:music_disc_cat"
+    },
+    "C": {
+      "item": "detectorsmod:copper_coil"
+    }
+  },
+  "result": {
+    "id": "detectorsmod:detectorists_music_disc",
+    "count": 1
+  }
+}
