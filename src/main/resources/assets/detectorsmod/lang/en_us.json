@@ -3,6 +3,7 @@
   "creativetab.detectors.detectors_items": "Detectors Items",
 
   "item.detectorsmod.copper_coil": "Copper Coil",
+  "item.detectorsmod.iron_trowel": "Iron Trowel",
 
   "item.detectorsmod.handheld_detector": "Handheld Detector",
   "item.detectorsmod.gold_detector": "Gold Detector",
@@ -13,5 +14,7 @@
   "detectorsmod:detector_success": "Detector Success!",
 
   "item.detectorsmod.detectorists_music_disc": "Detectorists Music Disc",
-  "item.detectorsmod.detectorists_music_disc.desc": "Johnny Flynn - Detectorists"
+  "item.detectorsmod.detectorists_music_disc.desc": "Johnny Flynn - Detectorists",
+
+  "message.detectorsmod.trowel_used": "Trowel used successfully! Used on x: %1$d, y: %2$d, z: %3$d"
 }

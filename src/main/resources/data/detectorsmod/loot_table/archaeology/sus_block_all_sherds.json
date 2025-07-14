@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:archaeology",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "angler" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "archer" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "arms_up" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "blade" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "brewer" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "burn" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "danger" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "explorer" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "friend" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "heart" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "heartbreak" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "howl" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "miner" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "mourner" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "plenty" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "prize" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "sheaf" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "shelter" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "skull" } ] },
+        { "type": "minecraft:item", "name": "minecraft:pottery_sherd", "functions": [ { "function": "minecraft:set_pottery_shard_pattern", "pattern": "snort" } ] }
+      ]
+    }
+  ]
+}

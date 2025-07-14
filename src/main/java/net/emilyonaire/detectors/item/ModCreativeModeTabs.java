@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.NETHERITE_DETECTOR.get());
                         output.accept(ModItems.COPPER_COIL.get());
                         output.accept(ModItems.DETECTORISTS_MUSIC_DISC.get());
+                        output.accept(ModItems.IRON_TROWEL.get());
                     })
                     .build());
 
