@@ -63,7 +63,7 @@ public class detector_item extends Item {
                 // If ignorable, look below
                 Block actualBlock = clickedBlock;
                 BlockPos pos = clickedPos;
-                while (Config.ignorableBlocks.contains(actualBlock) && pos.getY() > 0) {
+                while (ConvertToBlocks(Config.ignorableBlocks).contains(actualBlock) && pos.getY() > 0) {
                     pos = pos.below();
                     actualBlock = level.getBlockState(pos).getBlock();
                     System.out.println("Checking below: " + actualBlock.getName().getString());
@@ -72,6 +72,10 @@ public class detector_item extends Item {
                 // Determine tier by rarity
                 int tier = context.getItemInHand().getRarity().ordinal();
                 System.out.println("Detector tier: " + tier);
+
+                List<String> playerBlocksNames = Config.playerMadeBlocks;
+
+                List<Block> playerBlocks = ConvertToBlocks(playerBlocksNames);
 
                 // Get the combined block set up to our tier
                 List<String> blockNamesToDetect = switch (tier) {
@@ -89,18 +93,18 @@ public class detector_item extends Item {
 
                 // Determine scan size
                 int scanWidth = switch (tier) {
-                    case 0 -> 1;
-                    case 1 -> 2;
-                    case 2 -> 3;
-                    case 3 -> 4;
-                    default -> 1;
+                    case 0 -> Config.tier1Width;
+                    case 1 -> Config.tier2Width;
+                    case 2 -> Config.tier3Width;
+                    case 3 -> Config.tier4Width;
+                    default -> Config.tier1Width;
                 };
                 int scanDepth = switch (tier) {
-                    case 0 -> 8;
-                    case 1 -> 16;
-                    case 2 -> 32;
-                    case 3 -> 64;
-                    default -> 8;
+                    case 0 -> Config.tier1Depth;
+                    case 1 -> Config.tier2Depth;
+                    case 2 -> Config.tier3Depth;
+                    case 3 -> Config.tier4Depth;
+                    default -> Config.tier1Depth;
                 };
 
                 // Consume durability
@@ -116,6 +120,15 @@ public class detector_item extends Item {
                             BlockPos checkPos = pos.offset(x, y, z);
                             Block foundBlock = level.getBlockState(checkPos).getBlock();
                             if (blocksToDetect.contains(foundBlock)) {
+                                if(playerBlocks.contains(foundBlock)) {
+                                    System.out.println("Found player block: " + foundBlock.getName().getString() + " at " + checkPos);
+                                    if(!Config.enablePlayerMadeBlocks){
+                                        System.out.println("We have player blocks disabled. Continuing without action.");
+                                        continue;
+                                    }
+                                } else {
+                                    //do nothing, continue as normal
+                                }
                                 detectedCount++;
                                 System.out.println("Detected: " + foundBlock.getName().getString());
                             }

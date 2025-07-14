@@ -121,6 +121,47 @@ public class Config
                     "minecraft:sand",
                     "minecraft:suspicious_sand"
             ), Config::validateItemName);
+    //list of player made blocks. (Chest, crafting table, furnace, etc.)
+    private static final ForgeConfigSpec.ConfigValue<List<? extends String>> PLAYER_MADE_BLOCKS = BUILDER
+            .comment("A list of blocks that are made by players and should be scanned.")
+            .defineListAllowEmpty("playerMadeBlocks", List.of(
+                    "minecraft:chest",
+                    "minecraft:crafting_table",
+                    "minecraft:furnace",
+                    "minecraft:blast_furnace",
+                    "minecraft:smoker",
+                    "minecraft:anvil",
+                    "minecraft:enchanting_table",
+                    "minecraft:brewing_stand"
+            ), Config::validateItemName);
+
+    //individual ints for t1 width, t2 width, t3 width, t4 width, and t1 depth, t2 depth, t3 depth, t4 depth
+    private static final ForgeConfigSpec.IntValue TIER_1_WIDTH = BUILDER
+            .comment("The width of the tier 1 detector.")
+            .defineInRange("tier1Width", 1, 1, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TIER_2_WIDTH = BUILDER
+            .comment("The width of the tier 2 detector.")
+            .defineInRange("tier2Width", 2, 1, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TIER_3_WIDTH = BUILDER
+            .comment("The width of the tier 3 detector.")
+            .defineInRange("tier3Width", 3, 1, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TIER_4_WIDTH = BUILDER
+            .comment("The width of the tier 4 detector.")
+            .defineInRange("tier4Width", 4, 1, Integer.MAX_VALUE);
+
+    private static final ForgeConfigSpec.IntValue TIER_1_DEPTH = BUILDER
+            .comment("The depth of the tier 1 detector.")
+            .defineInRange("tier1Depth", 8, 1, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TIER_2_DEPTH = BUILDER
+            .comment("The depth of the tier 2 detector.")
+            .defineInRange("tier2Depth", 16, 1, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TIER_3_DEPTH = BUILDER
+            .comment("The depth of the tier 3 detector.")
+            .defineInRange("tier3Depth", 32, 1, Integer.MAX_VALUE);
+    private static final ForgeConfigSpec.IntValue TIER_4_DEPTH = BUILDER
+            .comment("The depth of the tier 4 detector.")
+            .defineInRange("tier4Depth", 64, 1, Integer.MAX_VALUE);
+
 
 
     private static final ForgeConfigSpec.BooleanValue LOG_DIRT_BLOCK = BUILDER
@@ -139,6 +180,10 @@ public class Config
     private static final ForgeConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
             .comment("A list of items to log on common setup.")
             .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), Config::validateItemName);
+    //Boolean to determine if we enable scanning player made blocks.
+    private static final ForgeConfigSpec.BooleanValue ENABLE_PLAYER_MADE_BLOCKS = BUILDER
+            .comment("Whether to enable scanning player made blocks.")
+            .define("enablePlayerMadeBlocks", true);
 
     static final ForgeConfigSpec SPEC = BUILDER.build();
 
@@ -152,6 +197,18 @@ public class Config
     public static List<String> tier4Blocks;
     public static List<String> ignorableBlocks;
     public static List<String> detectableBlocks;
+    public static List<String> playerMadeBlocks;
+    public static int tier1Width;
+    public static int tier2Width;
+    public static int tier3Width;
+    public static int tier4Width;
+    public static int tier1Depth;
+    public static int tier2Depth;
+    public static int tier3Depth;
+    public static int tier4Depth;
+    public static boolean enablePlayerMadeBlocks;
+
+
 
     private static boolean validateItemName(final Object obj)
     {
@@ -172,6 +229,21 @@ public class Config
         tier4Blocks = TIER_4_BLOCKS.get().stream().map(s -> (String) s).toList();
         ignorableBlocks = IGNORABLE_BLOCKS.get().stream().map(s -> (String) s).toList();
         detectableBlocks = DETECTABLE_BLOCKS.get().stream().map(s -> (String) s).toList();
+        playerMadeBlocks = PLAYER_MADE_BLOCKS.get().stream().map(s -> (String) s).toList();
+
+        //boolean for player made blocks
+        enablePlayerMadeBlocks = ENABLE_PLAYER_MADE_BLOCKS.get();
+
+        //widths and depths
+        tier1Width = TIER_1_WIDTH.get();
+        tier2Width = TIER_2_WIDTH.get();
+        tier3Width = TIER_3_WIDTH.get();
+        tier4Width = TIER_4_WIDTH.get();
+        tier1Depth = TIER_1_DEPTH.get();
+        tier2Depth = TIER_2_DEPTH.get();
+        tier3Depth = TIER_3_DEPTH.get();
+        tier4Depth = TIER_4_DEPTH.get();
+
 
 
 
