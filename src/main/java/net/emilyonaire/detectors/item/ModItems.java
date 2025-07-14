@@ -16,9 +16,12 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, DetectorsMod.MOD_ID);
 
     //CAPS name is code name, used in code, whereas, the name we use when registering VVVVV is used in the mod's LANG files.
+    //Crafting Items.
     public static final RegistryObject<Item> COPPER_COIL = ITEMS.register("copper_coil",
             () -> new Item(new Item.Properties()));
 
+
+    //Detector Items.
     public static final RegistryObject<Item> HANDHELD_DETECTOR = ITEMS.register("handheld_detector",
             () -> new detector_item(new Item.Properties()
                     .durability(32)
@@ -39,8 +42,15 @@ public class ModItems {
                     .durability(512)
                     .rarity(net.minecraft.world.item.Rarity.EPIC)
             ));
+    //Music Disc.
     public static final RegistryObject<Item> DETECTORISTS_MUSIC_DISC = ITEMS.register("detectorists_music_disc",
             () -> new Item(new Item.Properties().jukeboxPlayable(ModSounds.MUSIC_DETECTORISTS_KEY).stacksTo(1).rarity(Rarity.RARE)));
+
+    //Utility Items.
+    public static final RegistryObject<Item> IRON_TROWEL = ITEMS.register("iron_trowel",
+            () -> new net.emilyonaire.detectors.item.custom.trowel_item(new Item.Properties()
+                    .durability(250)
+            ));
 
 
 
