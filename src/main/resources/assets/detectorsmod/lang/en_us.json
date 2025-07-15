@@ -16,5 +16,8 @@
   "item.detectorsmod.detectorists_music_disc": "Detectorists Music Disc",
   "item.detectorsmod.detectorists_music_disc.desc": "Johnny Flynn - Detectorists",
 
-  "message.detectorsmod.trowel_used": "Trowel used successfully! Used on x: %1$d, y: %2$d, z: %3$d"
+  "message.detectorsmod.trowel_used": "Trowel used successfully! Used on x: %1$d, y: %2$d, z: %3$d",
+
+  "detectors.advancements.story.root.title": "Detectors!",
+  "detectors.advancements.story.root.description": "Thank you for installing Detectors Mod!"
 }
