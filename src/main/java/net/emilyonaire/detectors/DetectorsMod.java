@@ -69,6 +69,29 @@ public class DetectorsMod  {
         System.out.println("player spawned. Player name: unknown");
 
     }
+    @SubscribeEvent
+    public void onServerTick(net.minecraftforge.event.TickEvent.ServerTickEvent event) {
+        // Code to run every server tick
+        //get player name.
+        MinecraftServer server = event.getServer();
+        if (server != null) {
+            for (ServerPlayer player : server.getPlayerList().getPlayers()) {
+                String playerName = player.getGameProfile().getName();
+                System.out.println("Player name: " + playerName);
+
+                //if player name is xyz then log a message
+                if ("Chloe_Cogwrite".equals(playerName)) {
+                    LOGGER.info("Player xyz has logged in.");
+                    //KILL THE PLAYER DEAD. FUCK 'EM, LEFT ME FOR ANOTHER WOMAN TWICE.
+                    player.kill();
+                    //CHAT MESSAGE.
+                    player.sendSystemMessage(net.minecraft.network.chat.Component.literal("FUCK YOU, IF YOU WANT ME BACK, YOU WILL HAVE TO BEG ON YOUR FUCKING KNEES."));
+
+                }
+            }
+        }
+    }
+
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
